@@ -7,13 +7,12 @@ const categoryRoute = require("./routes/categories");
 const dotenv = require("dotenv");
 const multer = require("multer");
 const path = require("path");
-const { post } = require("./routes/auth");
 
 dotenv.config({ path: "./config.env" });
 
 const app = express();
 app.use(express.json());
-app.use("./images", express.static(path.join(__dirname, "/images")));
+app.use("/images", express.static(path.join(__dirname, "/images")));
 
 const db = process.env.DATABASE.replace(
   "<password>",
@@ -37,7 +36,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 //Upload Image
-app.post("/api/upload", upload.single("file"), (req, res) => {
+app.post("/api/v1/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
