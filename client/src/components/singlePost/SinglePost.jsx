@@ -14,7 +14,8 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  const PF = "http://localhost:5000/images/";
+  // const PF = "http://localhost:5000/images/";
+  const PF = "https://metachain-blog-app.herokuapp.com/images/";
 
   useEffect(() => {
     const fetchPost = async () => {

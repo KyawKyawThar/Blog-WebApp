@@ -3,7 +3,8 @@ import "./postdetails.css";
 import { Link } from "react-router-dom";
 
 export default function PostDetails({ post }) {
-  const PF = "http://localhost:5000/images/";
+  // const PF = "http://localhost:5000/images/";
+  const PF = "https://metachain-blog-app.herokuapp.com/images/";
   return (
     <div className="postdetails">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}

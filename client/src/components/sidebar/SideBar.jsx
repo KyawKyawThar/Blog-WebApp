@@ -37,6 +37,7 @@ export default function SideBar() {
           ))}
         </ul>
 
+
         <h3 className="sidebarTitle">FOLLOW US</h3>
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-square"></i>
